@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css" integrity="sha256-itWEYdFWzZPBG78bJOOiQIn06QCgN/F0wMDcC4nOhxY=" crossorigin="anonymous" />
+        <script src="{{ url_for('static', filename = 'jquery-3.2.1.min.js') }}"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js" integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs=" crossorigin="anonymous"></script>
+        <script src="{{ url_for('static', filename='home.js') }}"></script>
+        <title>{% block title %}{% endblock %} - Abhishek Satpathy</title>
+    </head>
+    <body>
+        <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+
+        <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top hinge-out-from-top">
+            <div class="top-bar-left">
+                <ul><a href="{{ url_for('home') }}">Abhishek Satpathy</a></ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li><a href="{{ url_for('about_me') }}">about me</a></li>
+                    <li><a href="{{ url_for('resume') }}">resume</a></li>
+                    <li><a href="{{ url_for('projects') }}">projects</a></li>
+                    <li><a href="{{ url_for('contact_me') }}">contact me</a></li>
+                    <li><a href="{{ url_for('built_with') }}">built with</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="content">{% block content %}{% endblock %}</div>
+    </body>
+</html>
+
+
