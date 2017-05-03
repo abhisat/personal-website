@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import render_template
+from flask import send_from_directory
 from flask import url_for
 from jinja2 import Template
 
@@ -16,7 +17,8 @@ def about_me():
 
 @app.route('/resume')
 def resume():
-    return render_template('resume.html')
+    response = send_from_directory('static', filename='Tech_Resume.pdf')
+    return response
 
 @app.route('/projects')
 def projects():
