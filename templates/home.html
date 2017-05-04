@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="{{ url_for('static', filename='foundation.min.css') }}" />
         <script src="{{ url_for('static', filename = 'jquery-3.2.1.min.js') }}"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='foundation.min.css') }}" />
+        <link href="https://fonts.googleapis.com/css?family=Baloo|Wendy+One" rel="stylesheet">
         <script src={{ url_for('static', filename="foundation.min.js") }} type='text/javascript'></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" />
         <script src="{{ url_for('static', filename='home.js') }}"></script>
         <title>{% block title %}Abhishek Satpathy{% endblock %}</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='abhisheksatpathy.css') }}">
@@ -21,10 +22,17 @@
         </script>
     </head>
     <body>
-        <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
-            <button class="menu-icon" type="button" data-toggle></button>
-            <div class="title-bar-title">Menu</div>
-        </div>
+        <nav role="navigation">
+            <ul id="overlay-nav-menu" class="overlay-nav-menu">
+                <li><a href="{{ url_for('about_me') }}" class="text_color header_font">about me</a></li>
+                <li><a href="{{ url_for('resume') }}" class="text_color header_font">resume</a></li>
+                <li><a href="{{ url_for('projects') }}" class="text_color header_font">projects</a></li>
+                <li><a href="{{ url_for('contact_me') }}" class="text_color header_font">contact me</a></li>
+                <li><a href="{{ url_for('built_with') }}" class="text_color header_font">built with</a></li>
+            </ul>
+            <a data-toggle-menu class="overlay-nav-menu-toggle" href="#overlay-nav-menu"><img class='logo' src="{{ url_for('static', filename='logo.svg') }}"></a>
+            <a data-toggle-menu class="overlay-nav-menu-toggle" href="#overlay-nav-menu">close</a>
+        </nav>
 
         <div class="top-bar nav_color" id="example-animated-menu" data-animate="hinge-in-from-top hinge-out-from-top">
             <div class="top-bar-left">
@@ -32,15 +40,32 @@
             </div>
             <div class="top-bar-right">
                 <ul class="dropdown menu" data-dropdown-menu>
-                    <li><a href="{{ url_for('about_me') }}" class="text_color">about me</a></li>
-                    <li><a href="{{ url_for('resume') }}" class="text_color">resume</a></li>
-                    <li><a href="{{ url_for('projects') }}" class="text_color">projects</a></li>
-                    <li><a href="{{ url_for('contact_me') }}" class="text_color">contact me</a></li>
-                    <li><a href="{{ url_for('built_with') }}" class="text_color">built with</a></li>
+                    <li><a href="{{ url_for('about_me') }}" class="text_color header_font">about me</a></li>
+                    <li><a href="{{ url_for('resume') }}" class="text_color header_font">resume</a></li>
+                    <li><a href="{{ url_for('projects') }}" class="text_color header_font">projects</a></li>
+                    <li><a href="{{ url_for('contact_me') }}" class="text_color header_font">contact me</a></li>
+                    <li><a href="{{ url_for('built_with') }}" class="text_color header_font">built with</a></li>
                 </ul>
             </div>
         </div>
+        <p>This Site is under construction. Some of the pages might lack any content.</p>
         <div id="content">{% block content %}{% endblock %}</div>
+        <div class="footer">
+            <div class="row">
+                <div class="copyRights small-12 medium-12 large-6 columns">
+                    <p>Copyrights</p>
+                </div>
+
+                <div class="socialMedia small-12 medium-12 large-6 columns">
+                    <ul class="dropdown menu" data-dropdown-menu>
+                    <li><a href="" class="text_color header_font"><img src="{{ url_for('static', filename='fb.png') }}"></a></li>
+                    <li><a href="" class="text_color header_font"><img src="{{ url_for('static', filename='github.png') }}"></a></li>
+                    <li><a href="" class="text_color header_font"><img src="{{ url_for('static', filename='hackerrank.png') }}"></a></li>
+                    <li><a href="" class="text_color header_font"><img src="{{ url_for('static', filename='twitter.svg') }}"></a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
 
