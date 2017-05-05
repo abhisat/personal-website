@@ -31,7 +31,7 @@
                 <li><a href="{{ url_for('built_with') }}" class="text_color header_font">built with</a></li>
             </ul>
             <a data-toggle-menu class="overlay-nav-menu-toggle" href="#overlay-nav-menu"><img class='logo' src="{{ url_for('static', filename='logo.svg') }}"></a>
-            <a data-toggle-menu class="overlay-nav-menu-toggle" href="#overlay-nav-menu">close</a>
+            <a data-toggle-menu-close class="overlay-nav-menu-toggle" href="#overlay-nav-menu">close</a>
         </nav>
 
         <div class="top-bar nav_color" id="example-animated-menu" data-animate="hinge-in-from-top hinge-out-from-top">
@@ -58,10 +58,12 @@
 
                 <div class="socialMedia small-12 medium-12 large-6 columns">
                     <ul class="dropdown menu" data-dropdown-menu>
-                    <li><a href="" class="text_color header_font"><img src="{{ url_for('static', filename='fb.png') }}"></a></li>
-                    <li><a href="" class="text_color header_font"><img src="{{ url_for('static', filename='github.png') }}"></a></li>
-                    <li><a href="" class="text_color header_font"><img src="{{ url_for('static', filename='hackerrank.png') }}"></a></li>
-                    <li><a href="" class="text_color header_font"><img src="{{ url_for('static', filename='twitter.svg') }}"></a></li>
+                    <li><a href="https://github.com/abhisat" class="text_color header_font footer-social"><img src="{{ url_for('static', filename='github.png') }}"></a></li>
+                    <li><a href="https://www.linkedin.com/in/abhisat/" class="text_color header_font footer-social"><img src="{{ url_for('static', filename='linkedIn.png') }}"></a></li>
+                    <li><a href="https://twitter.com/Abhishek_Sat" class="text_color header_font footer-social"><img src="{{ url_for('static', filename='twitter.svg') }}"></a></li>
+                    <li><a href="https://www.facebook.com/satpathy.abhishek" class="text_color header_font footer-social"><img src="{{ url_for('static', filename='fb.png') }}"></a></li>
+                    <li><a href="https://www.hackerrank.com/abhisat" class="text_color header_font footer-social"><img src="{{ url_for('static', filename='hackerrank.png') }}"></a></li>
+                    
                 </ul>
                 </div>
             </div>

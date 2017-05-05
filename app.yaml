@@ -9,8 +9,3 @@ libraries:
 handlers:
 - url: /.*
   script: abhisheksatpathy.app
-
-- url: /(.*\.(gif|png|jpg|svg))
-  static_files: static/\1
-  upload: static/.*\.(gif|png|jpg|svg)
-  mime_type: image/svg+xml

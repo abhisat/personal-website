@@ -9,6 +9,12 @@ div{
     font-family: 'Wendy One', sans-serif;
 }
 
+.footer-social{
+  width: 4rem;
+  height: auto;
+  padding: 0 !important;
+}
+
 .overlay-nav-menu-toggle {
   position: relative;
   font-size: 4rem;
