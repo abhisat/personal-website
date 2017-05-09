@@ -1,18 +1,36 @@
-.logo{
-    height: 5rem;
+.mainLogo{
+    height: 3.25rem;
     width: auto;
+    
+}
+.mainLogo_black{
+  height: 3.25rem;
+  width: auto;
+  
+  
+}
+.logo{
+  z-index: 0;
+}
+.logo_black, .menu > li > a >.logo_black{
+  z-index: 1;
+  display: none;
+}
+.menu > li > a > img{
+  height: 1.75rem;
 }
 ul{
     margin-bottom: 0 !important;
 }
-div{
+.header_font{
     font-family: 'Wendy One', sans-serif;
 }
 
 .footer-social{
-  width: 4rem;
   height: auto;
   padding: 0 !important;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .overlay-nav-menu-toggle {

@@ -1,21 +1,30 @@
-.top-bar{
-    color: #efefef;
+.top-bar, .top-bar ul{
+    background-color: #f0f0f6 !important;
 }
 .logo_color{
     color: #ffc30f;
 }
 .text_color{
-    color: #ffc30f;
+    color: #ffc30f !important;
+}
+.text_color:hover{
+	color: #000000 !important;
 }
 .header_font{
-    font-family: "Wendy One", sans-serif !important;
+    font-family: "Baloo", cursive !important;
     font-size: 1.5em;
-    margin-top: 0.5em;
 }
 .footer{
 	position: fixed;
 	bottom: 0;
 	width: 100%;
+	background-color: #f0f0f6 !important;
+	font-family: "Raleway", sans-serif !important;
+	padding: 0.25rem;
+	
+}
+.footer p{
+	margin: 0;
 }
 /* Small only */
 @media screen and (max-width: 54.99999em) {
